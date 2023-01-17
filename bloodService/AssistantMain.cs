@@ -8,7 +8,7 @@ namespace bloodService
 {
     public partial class AssistantMain : Form
     {
-        string conStr = @"Data Source= ADCLG1; Initial catalog=Kuryleva_4194; Integrated Security=True";
+        string conStr = @"Data Source= LAPTOP-T1QLKLDI\SQLEXPRESS; Initial catalog=BloodService; Integrated Security=True";
         SqlConnection sqlCon;
         public int id { get; set; }
 

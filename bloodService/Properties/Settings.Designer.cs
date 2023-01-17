@@ -32,5 +32,16 @@ namespace bloodService.Properties {
                 return ((string)(this["Kuryleva_4194ConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-T1QLKLDI\\SQLEXPRESS;Initial Catalog=BloodService;Integrated Se" +
+            "curity=True")]
+        public string BloodServiceConnectionString {
+            get {
+                return ((string)(this["BloodServiceConnectionString"]));
+            }
+        }
     }
 }

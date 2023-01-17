@@ -9,7 +9,7 @@ namespace bloodService
 {
     public partial class AdminMain : Form
     {
-        string conStr = @"Data Source= ADCLG1; Initial catalog=Kuryleva_4194; Integrated Security=True";
+        string conStr = @"Data Source= LAPTOP-T1QLKLDI\SQLEXPRESS; Initial catalog=BloodService; Integrated Security=True";
         SqlConnection sqlCon;
         public int id { get; set; }
         public AdminMain()
@@ -26,13 +26,10 @@ namespace bloodService
 
         private void AdminMain_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "kuryleva_4194DataSet.UsersEnter". При необходимости она может быть перемещена или удалена.
-            this.usersEnterTableAdapter.Fill(this.kuryleva_4194DataSet.UsersEnter);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "kuryleva_4194DataSet1.UsersEnter". При необходимости она может быть перемещена или удалена.
-            this.usersEnterTableAdapter1.Fill(this.kuryleva_4194DataSet1.UsersEnter);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "kuryleva_4194DataSet.UsersEnter". При необходимости она может быть перемещена или удалена.
-            this.usersEnterTableAdapter.Fill(this.kuryleva_4194DataSet.UsersEnter);
-            sqlCon = new SqlConnection(conStr);
+			// TODO: данная строка кода позволяет загрузить данные в таблицу "bloodServiceDataSet1.EnterHistory". При необходимости она может быть перемещена или удалена.
+			this.enterHistoryTableAdapter.Fill(this.bloodServiceDataSet1.EnterHistory);
+
+			sqlCon = new SqlConnection(conStr);
             string cmdStr = "Select image from UsersEnter where id = '" + id + "'";
             string cmdStr2 = "Select fullname from UsersEnter where id = '" + id + "'";
             SqlCommand cmd1 = new SqlCommand(cmdStr, sqlCon);
@@ -70,7 +67,7 @@ namespace bloodService
                 using (SqlConnection con = new SqlConnection(conStr))
                 {
                     SqlDataAdapter da = new SqlDataAdapter();
-                    da.SelectCommand = new SqlCommand("select login, lastEnter, enterResult from UsersEnter where login like '%" + textBox1.Text + "%'", con);
+                    da.SelectCommand = new SqlCommand("select * from EnterHistory where login like '%" + textBox1.Text + "%'", con);
                     con.Open();
                     da.Fill(ds);
                     dataGridView1.DataSource = ds.Tables[0];

@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace bloodService
@@ -46,18 +39,27 @@ namespace bloodService
         {
             if (textBox1.Text != null && textBox2.Text != null)
             {
+                string cmdStrHistory;
+                string login = textBox1.Text;
                 try
                 {
+
                     sqlCon = new SqlConnection(conStr);
-                    string cmdStr = "Select role from UsersEnter where login = '" + textBox1.Text + "' and password = '" + textBox2.Text + "'";
-                    string cmdStrId = "Select id from UsersEnter where login = '" + textBox1.Text + "' and password = '" + textBox2.Text + "'";
+                    string cmdStr = "Select role from UsersEnter where login = '" + login + "' and password = '" + textBox2.Text + "'";
+                    string cmdStrId = "Select id from UsersEnter where login = '" + login + "' and password = '" + textBox2.Text + "'";
                     SqlCommand cmd1 = new SqlCommand(cmdStr, sqlCon);
                     SqlCommand cmd2 = new SqlCommand(cmdStrId, sqlCon);
+
                     sqlCon.Open();
+
                     string role = cmd1.ExecuteScalar().ToString();
                     userId = Convert.ToInt32(cmd2.ExecuteScalar());
-                    sqlCon.Close();
-                    
+
+                    cmdStrHistory = "insert into enterHistory values ('" + login + "','" + DateTime.Now + "', 1)";
+                    SqlCommand cmdHistory = new SqlCommand(cmdStrHistory, sqlCon);
+                    cmdHistory.ExecuteNonQuery();
+
+
                     switch (role)
                     {
                         case "assistant":
@@ -93,11 +95,18 @@ namespace bloodService
                     }
                 }
                 catch {
+                    cmdStrHistory = "insert into enterHistory values ('" + login + "','" + DateTime.Now + "', '0')";
+                    SqlCommand cmdHistory = new SqlCommand(cmdStrHistory, sqlCon);
+
+                    cmdHistory.ExecuteNonQuery();
+                    sqlCon.Close();
+
                     MessageBox.Show("Неверный логин или пароль");
+                    textBox2.Text = "";
                 }
             }else
             {
-                MessageBox.Show("Заполните поля логина и пароля!");
+                MessageBox.Show("Заполните поля для логина и пароля!");
             }
         }
 
