@@ -13,6 +13,8 @@ namespace bloodService
         DataSet ds;
         SqlConnection sqlCon;
 
+        int min = 1; // стандартно 30
+
         public int userId { get; set; }
         public Enter()
         {
@@ -65,6 +67,7 @@ namespace bloodService
                         case "assistant":
                             AssistantMain am = new AssistantMain();
                             am.id = userId;
+                            am.AssistantTimer();
                             this.Hide();
                             am.Show();
                             break;
@@ -88,6 +91,7 @@ namespace bloodService
                             break;
                         case "assistantExplorer":
                             AssistantExplorerMain aem = new AssistantExplorerMain();
+                            aem.AssistantTimer();
                             aem.id = userId;
                             this.Hide();
                             aem.Show();
@@ -120,6 +124,29 @@ namespace bloodService
         private void Enter_Load(object sender, EventArgs e)
         {
             
+        }
+
+		private void timer1_Tick(object sender, EventArgs e)
+		{
+            min--;
+            label3.Text = $"{min}мин.";
+            if (min == 0)
+            {
+                timer1.Stop();
+                label3.Visible = false;
+                button1.Enabled = true;
+                textBox1.Enabled = true;
+                textBox2.Enabled = true;
+            }
+        }
+
+        public void Block()
+        {
+            button1.Enabled = false;
+            textBox1.Enabled = false;
+            textBox2.Enabled = false;
+            timer1.Start();
+            label3.Visible = true;
         }
     }
 }

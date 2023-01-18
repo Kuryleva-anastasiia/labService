@@ -41,23 +41,23 @@
 			this.label3 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
-			this.bloodServiceDataSet1 = new bloodService.BloodServiceDataSet1();
 			this.enterHistoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.bloodServiceDataSet1 = new bloodService.BloodServiceDataSet1();
 			this.enterHistoryTableAdapter = new bloodService.BloodServiceDataSet1TableAdapters.EnterHistoryTableAdapter();
 			this.loginDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.enterResultDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.bloodServiceDataSet1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.enterHistoryBindingSource)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.bloodServiceDataSet1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// button1
 			// 
 			this.button1.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.button1.Location = new System.Drawing.Point(387, 15);
-			this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.button1.Margin = new System.Windows.Forms.Padding(4);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(100, 28);
 			this.button1.TabIndex = 0;
@@ -91,7 +91,7 @@
 			// 
 			this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
 			this.pictureBox1.Location = new System.Drawing.Point(16, 15);
-			this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
 			this.pictureBox1.Name = "pictureBox1";
 			this.pictureBox1.Size = new System.Drawing.Size(184, 140);
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -104,7 +104,7 @@
 			this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.button2.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.button2.Location = new System.Drawing.Point(16, 260);
-			this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.button2.Margin = new System.Windows.Forms.Padding(4);
 			this.button2.Name = "button2";
 			this.button2.Size = new System.Drawing.Size(184, 28);
 			this.button2.TabIndex = 7;
@@ -116,7 +116,7 @@
 			// 
 			this.button3.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.button3.Location = new System.Drawing.Point(16, 295);
-			this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.button3.Margin = new System.Windows.Forms.Padding(4);
 			this.button3.Name = "button3";
 			this.button3.Size = new System.Drawing.Size(276, 28);
 			this.button3.TabIndex = 8;
@@ -126,7 +126,7 @@
 			// textBox1
 			// 
 			this.textBox1.Location = new System.Drawing.Point(16, 422);
-			this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.textBox1.Margin = new System.Windows.Forms.Padding(4);
 			this.textBox1.Name = "textBox1";
 			this.textBox1.Size = new System.Drawing.Size(200, 22);
 			this.textBox1.TabIndex = 10;
@@ -137,7 +137,7 @@
 			this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.button4.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.button4.Location = new System.Drawing.Point(225, 420);
-			this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.button4.Margin = new System.Windows.Forms.Padding(4);
 			this.button4.Name = "button4";
 			this.button4.Size = new System.Drawing.Size(116, 28);
 			this.button4.TabIndex = 11;
@@ -188,15 +188,15 @@
 			this.dataGridView1.Size = new System.Drawing.Size(471, 150);
 			this.dataGridView1.TabIndex = 14;
 			// 
-			// bloodServiceDataSet1
-			// 
-			this.bloodServiceDataSet1.DataSetName = "BloodServiceDataSet1";
-			this.bloodServiceDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-			// 
 			// enterHistoryBindingSource
 			// 
 			this.enterHistoryBindingSource.DataMember = "EnterHistory";
 			this.enterHistoryBindingSource.DataSource = this.bloodServiceDataSet1;
+			// 
+			// bloodServiceDataSet1
+			// 
+			this.bloodServiceDataSet1.DataSetName = "BloodServiceDataSet1";
+			this.bloodServiceDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
 			// 
 			// enterHistoryTableAdapter
 			// 
@@ -205,7 +205,7 @@
 			// loginDataGridViewTextBoxColumn
 			// 
 			this.loginDataGridViewTextBoxColumn.DataPropertyName = "login";
-			this.loginDataGridViewTextBoxColumn.HeaderText = "login";
+			this.loginDataGridViewTextBoxColumn.HeaderText = "Логин";
 			this.loginDataGridViewTextBoxColumn.MinimumWidth = 6;
 			this.loginDataGridViewTextBoxColumn.Name = "loginDataGridViewTextBoxColumn";
 			this.loginDataGridViewTextBoxColumn.ReadOnly = true;
@@ -213,7 +213,7 @@
 			// dateDataGridViewTextBoxColumn
 			// 
 			this.dateDataGridViewTextBoxColumn.DataPropertyName = "date";
-			this.dateDataGridViewTextBoxColumn.HeaderText = "date";
+			this.dateDataGridViewTextBoxColumn.HeaderText = "Дата входа";
 			this.dateDataGridViewTextBoxColumn.MinimumWidth = 6;
 			this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
 			this.dateDataGridViewTextBoxColumn.ReadOnly = true;
@@ -221,7 +221,7 @@
 			// enterResultDataGridViewCheckBoxColumn
 			// 
 			this.enterResultDataGridViewCheckBoxColumn.DataPropertyName = "enterResult";
-			this.enterResultDataGridViewCheckBoxColumn.HeaderText = "enterResult";
+			this.enterResultDataGridViewCheckBoxColumn.HeaderText = "Вход выполнен";
 			this.enterResultDataGridViewCheckBoxColumn.MinimumWidth = 6;
 			this.enterResultDataGridViewCheckBoxColumn.Name = "enterResultDataGridViewCheckBoxColumn";
 			this.enterResultDataGridViewCheckBoxColumn.ReadOnly = true;
@@ -245,14 +245,14 @@
 			this.Controls.Add(this.button1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-			this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.Margin = new System.Windows.Forms.Padding(4);
 			this.Name = "AdminMain";
 			this.Text = "AdminMain";
 			this.Load += new System.EventHandler(this.AdminMain_Load);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.bloodServiceDataSet1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.enterHistoryBindingSource)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.bloodServiceDataSet1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

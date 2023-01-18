@@ -56,7 +56,15 @@ namespace bloodService
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                File.WriteAllText(@"C:\College\ТРПО\labService\AdminReport.txt", "Отчет");
+                MessageBox.Show("Отчет создан", "Information");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)

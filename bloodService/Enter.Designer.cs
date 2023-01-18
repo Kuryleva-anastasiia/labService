@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Enter));
 			this.textBox1 = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
@@ -36,12 +37,14 @@
 			this.label3 = new System.Windows.Forms.Label();
 			this.button1 = new System.Windows.Forms.Button();
 			this.button2 = new System.Windows.Forms.Button();
+			this.timer1 = new System.Windows.Forms.Timer(this.components);
+			this.label4 = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
 			// textBox1
 			// 
 			this.textBox1.Location = new System.Drawing.Point(228, 102);
-			this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.textBox1.Margin = new System.Windows.Forms.Padding(4);
 			this.textBox1.Name = "textBox1";
 			this.textBox1.Size = new System.Drawing.Size(188, 22);
 			this.textBox1.TabIndex = 0;
@@ -73,7 +76,7 @@
 			// textBox2
 			// 
 			this.textBox2.Location = new System.Drawing.Point(228, 154);
-			this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.textBox2.Margin = new System.Windows.Forms.Padding(4);
 			this.textBox2.Name = "textBox2";
 			this.textBox2.Size = new System.Drawing.Size(188, 22);
 			this.textBox2.TabIndex = 2;
@@ -97,7 +100,7 @@
 			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.button1.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.button1.Location = new System.Drawing.Point(139, 207);
-			this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.button1.Margin = new System.Windows.Forms.Padding(4);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(279, 37);
 			this.button1.TabIndex = 5;
@@ -110,12 +113,26 @@
 			this.button2.BackgroundImage = global::bloodService.Properties.Resources.view;
 			this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.button2.Location = new System.Drawing.Point(425, 151);
-			this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.button2.Margin = new System.Windows.Forms.Padding(4);
 			this.button2.Name = "button2";
 			this.button2.Size = new System.Drawing.Size(33, 28);
 			this.button2.TabIndex = 6;
 			this.button2.UseVisualStyleBackColor = true;
 			this.button2.Click += new System.EventHandler(this.button2_Click);
+			// 
+			// timer1
+			// 
+			this.timer1.Interval = 6000;
+			this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+			// 
+			// label4
+			// 
+			this.label4.AutoSize = true;
+			this.label4.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label4.Location = new System.Drawing.Point(519, 249);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(0, 24);
+			this.label4.TabIndex = 7;
 			// 
 			// Enter
 			// 
@@ -123,6 +140,7 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.White;
 			this.ClientSize = new System.Drawing.Size(600, 289);
+			this.Controls.Add(this.label4);
 			this.Controls.Add(this.button2);
 			this.Controls.Add(this.button1);
 			this.Controls.Add(this.label3);
@@ -132,7 +150,7 @@
 			this.Controls.Add(this.textBox1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-			this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.Margin = new System.Windows.Forms.Padding(4);
 			this.Name = "Enter";
 			this.Text = "Sign In";
 			this.Load += new System.EventHandler(this.Enter_Load);
@@ -150,6 +168,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-    }
+		private System.Windows.Forms.Timer timer1;
+		private System.Windows.Forms.Label label4;
+	}
 }
 

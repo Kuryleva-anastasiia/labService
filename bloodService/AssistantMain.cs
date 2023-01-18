@@ -11,6 +11,9 @@ namespace bloodService
         string conStr = @"Data Source= LAPTOP-T1QLKLDI\SQLEXPRESS; Initial catalog=BloodService; Integrated Security=True";
         SqlConnection sqlCon;
         public int id { get; set; }
+        private int min = 10; // стандартно 150
+
+        Enter en = new Enter();
 
         public AssistantMain()
         {
@@ -19,7 +22,6 @@ namespace bloodService
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Enter en = new Enter();
             this.Close();
             en.Show();
         }
@@ -56,5 +58,44 @@ namespace bloodService
             b.Show();
             this.Hide();
         }
-    }
+
+		private void timer1_Tick(object sender, EventArgs e)
+		{
+            min--;
+            int hour = min / 60;
+            int minute = min - hour * 60;
+            label3.Text = $"{hour}ч. {minute}мин.";
+
+            if (min == 5) // стандартно 15 мин
+            {
+                MessageBox.Show("Окончание времени сеанса", "Уведомление");
+            }
+            if (min == 0)
+            {
+                en.Block();
+                en.Show();
+                this.Close();
+            }
+        }
+
+        public void AssistantTimer()
+        {
+            timer1.Start();
+            label3.Text = $"{min / 60}ч. {min - (min / 60) * 60}мин.";
+            label3.Visible = true;
+        }
+
+		private void button3_Click(object sender, EventArgs e)
+		{
+            try
+            {
+                File.WriteAllText(@"C:\College\ТРПО\labService\AssistantReport.txt", "Отчет");
+                MessageBox.Show("Отчет создан", "Information");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+	}
 }
