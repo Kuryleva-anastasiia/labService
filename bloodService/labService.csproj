@@ -89,6 +89,12 @@
     <Compile Include="AssistantMain.Designer.cs">
       <DependentUpon>AssistantMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPatient.Designer.cs">
+      <DependentUpon>AddPatient.cs</DependentUpon>
+    </Compile>
     <Compile Include="biomaterial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AssistantMain.resx">
       <DependentUpon>AssistantMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddPatient.resx">
+      <DependentUpon>AddPatient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="biomaterial.resx">
       <DependentUpon>biomaterial.cs</DependentUpon>

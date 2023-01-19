@@ -119,7 +119,14 @@ namespace bloodService
 
 		private void button2_Click_1(object sender, EventArgs e)
 		{
-            this.analyzeServicesTableAdapter.Update(this.bloodServiceDataSet1.AnalyzeServices);
+            try
+            {
+                this.analyzeServicesTableAdapter.Update(this.bloodServiceDataSet1.AnalyzeServices);
+                MessageBox.Show("Успешно сохранено!");
+            }
+            catch (Exception ex) { 
+                MessageBox.Show("Изменения не были сохранены!\n\n" + ex.Message);
+            }
         }
     }
 }

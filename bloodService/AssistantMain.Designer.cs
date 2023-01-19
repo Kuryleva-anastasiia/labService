@@ -43,14 +43,16 @@
 			// 
 			// button1
 			// 
+			this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(227)))), ((int)(((byte)(131)))));
+			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.button1.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.button1.Location = new System.Drawing.Point(389, 15);
 			this.button1.Margin = new System.Windows.Forms.Padding(4);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(100, 28);
 			this.button1.TabIndex = 0;
-			this.button1.Text = "Вход";
-			this.button1.UseVisualStyleBackColor = true;
+			this.button1.Text = "Выход";
+			this.button1.UseVisualStyleBackColor = false;
 			this.button1.Click += new System.EventHandler(this.button1_Click);
 			// 
 			// label2
@@ -114,7 +116,7 @@
 			// 
 			// timer1
 			// 
-			this.timer1.Interval = 1000;
+			this.timer1.Interval = 60000;
 			this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
 			// 
 			// label3

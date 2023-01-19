@@ -41,12 +41,12 @@
 			this.label3 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
-			this.enterHistoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.bloodServiceDataSet1 = new bloodService.BloodServiceDataSet1();
-			this.enterHistoryTableAdapter = new bloodService.BloodServiceDataSet1TableAdapters.EnterHistoryTableAdapter();
 			this.loginDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.enterResultDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+			this.enterHistoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.bloodServiceDataSet1 = new bloodService.BloodServiceDataSet1();
+			this.enterHistoryTableAdapter = new bloodService.BloodServiceDataSet1TableAdapters.EnterHistoryTableAdapter();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.enterHistoryBindingSource)).BeginInit();
@@ -55,14 +55,16 @@
 			// 
 			// button1
 			// 
+			this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(227)))), ((int)(((byte)(131)))));
+			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.button1.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.button1.Location = new System.Drawing.Point(387, 15);
 			this.button1.Margin = new System.Windows.Forms.Padding(4);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(100, 28);
 			this.button1.TabIndex = 0;
-			this.button1.Text = "Вход";
-			this.button1.UseVisualStyleBackColor = true;
+			this.button1.Text = "Выход";
+			this.button1.UseVisualStyleBackColor = false;
 			this.button1.Click += new System.EventHandler(this.button1_Click);
 			// 
 			// label2
@@ -188,20 +190,6 @@
 			this.dataGridView1.Size = new System.Drawing.Size(471, 150);
 			this.dataGridView1.TabIndex = 14;
 			// 
-			// enterHistoryBindingSource
-			// 
-			this.enterHistoryBindingSource.DataMember = "EnterHistory";
-			this.enterHistoryBindingSource.DataSource = this.bloodServiceDataSet1;
-			// 
-			// bloodServiceDataSet1
-			// 
-			this.bloodServiceDataSet1.DataSetName = "BloodServiceDataSet1";
-			this.bloodServiceDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-			// 
-			// enterHistoryTableAdapter
-			// 
-			this.enterHistoryTableAdapter.ClearBeforeFill = true;
-			// 
 			// loginDataGridViewTextBoxColumn
 			// 
 			this.loginDataGridViewTextBoxColumn.DataPropertyName = "login";
@@ -225,6 +213,20 @@
 			this.enterResultDataGridViewCheckBoxColumn.MinimumWidth = 6;
 			this.enterResultDataGridViewCheckBoxColumn.Name = "enterResultDataGridViewCheckBoxColumn";
 			this.enterResultDataGridViewCheckBoxColumn.ReadOnly = true;
+			// 
+			// enterHistoryBindingSource
+			// 
+			this.enterHistoryBindingSource.DataMember = "EnterHistory";
+			this.enterHistoryBindingSource.DataSource = this.bloodServiceDataSet1;
+			// 
+			// bloodServiceDataSet1
+			// 
+			this.bloodServiceDataSet1.DataSetName = "BloodServiceDataSet1";
+			this.bloodServiceDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+			// 
+			// enterHistoryTableAdapter
+			// 
+			this.enterHistoryTableAdapter.ClearBeforeFill = true;
 			// 
 			// AdminMain
 			// 

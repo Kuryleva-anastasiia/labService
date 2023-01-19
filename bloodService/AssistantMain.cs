@@ -55,6 +55,7 @@ namespace bloodService
         private void button2_Click(object sender, EventArgs e)
         {
             biomaterial b = new biomaterial();
+            b.id = id;
             b.Show();
             this.Hide();
         }

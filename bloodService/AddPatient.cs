@@ -11,14 +11,14 @@ using System.Windows.Forms;
 
 namespace bloodService
 {
-    public partial class Biomaterial : Form
+    public partial class biomaterial : Form
     {
         public int id { get; set; }
 
         string conStr = @"Data Source= LAPTOP-T1QLKLDI\SQLEXPRESS; Initial catalog=BloodService; Integrated Security=True";
         SqlConnection sqlCon;
 
-        public Biomaterial()
+        public biomaterial()
         {
             InitializeComponent();
             sqlCon = new SqlConnection(conStr);
