@@ -28,7 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(biomaterial));
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Biomaterial));
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
@@ -139,8 +139,9 @@
 			this.button3.TabIndex = 11;
 			this.button3.Text = "Добавить нового пользователя";
 			this.button3.UseVisualStyleBackColor = false;
+			this.button3.Click += new System.EventHandler(this.button3_Click);
 			// 
-			// biomaterial
+			// Biomaterial
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -159,7 +160,7 @@
 			this.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-			this.Name = "biomaterial";
+			this.Name = "Biomaterial";
 			this.Text = "biomaterial";
 			this.Load += new System.EventHandler(this.biomaterial_Load);
 			this.ResumeLayout(false);

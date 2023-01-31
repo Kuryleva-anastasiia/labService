@@ -5,6 +5,10 @@ VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "labService", "bloodService\labService.csproj", "{8F60B740-2606-4B2B-B4D3-E33B41B2F91E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PriceCounter", "PriceCounter\PriceCounter.csproj", "{5B71F469-8124-4A95-9650-D37774374AA1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{6FD6CBE1-6B57-447C-9417-37EC19E9E6A0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,8 +17,16 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{8F60B740-2606-4B2B-B4D3-E33B41B2F91E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8F60B740-2606-4B2B-B4D3-E33B41B2F91E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8F60B740-2606-4B2B-B4D3-E33B41B2F91E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8F60B740-2606-4B2B-B4D3-E33B41B2F91E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F60B740-2606-4B2B-B4D3-E33B41B2F91E}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F60B740-2606-4B2B-B4D3-E33B41B2F91E}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{5B71F469-8124-4A95-9650-D37774374AA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B71F469-8124-4A95-9650-D37774374AA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B71F469-8124-4A95-9650-D37774374AA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B71F469-8124-4A95-9650-D37774374AA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FD6CBE1-6B57-447C-9417-37EC19E9E6A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FD6CBE1-6B57-447C-9417-37EC19E9E6A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FD6CBE1-6B57-447C-9417-37EC19E9E6A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FD6CBE1-6B57-447C-9417-37EC19E9E6A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

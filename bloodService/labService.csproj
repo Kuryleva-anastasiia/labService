@@ -71,6 +71,12 @@
     <Compile Include="AccountantMain.Designer.cs">
       <DependentUpon>AccountantMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddPatients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPatients.Designer.cs">
+      <DependentUpon>AddPatients.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,12 +94,6 @@
     </Compile>
     <Compile Include="AssistantMain.Designer.cs">
       <DependentUpon>AssistantMain.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AddPatient.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddPatient.Designer.cs">
-      <DependentUpon>AddPatient.cs</DependentUpon>
     </Compile>
     <Compile Include="biomaterial.cs">
       <SubType>Form</SubType>
@@ -138,6 +138,9 @@
     <EmbeddedResource Include="AccountantMain.resx">
       <DependentUpon>AccountantMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddPatients.resx">
+      <DependentUpon>AddPatients.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminMain.resx">
       <DependentUpon>AdminMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -146,9 +149,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AssistantMain.resx">
       <DependentUpon>AssistantMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AddPatient.resx">
-      <DependentUpon>AddPatient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="biomaterial.resx">
       <DependentUpon>biomaterial.cs</DependentUpon>
@@ -250,6 +250,12 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PriceCounter\PriceCounter.csproj">
+      <Project>{5b71f469-8124-4a95-9650-d37774374aa1}</Project>
+      <Name>PriceCounter</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
